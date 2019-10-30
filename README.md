@@ -1,5 +1,5 @@
 # Web_Chat_servlet_v3
-Webchat for exchanging messages by several users.
+SPA application for exchanging messages by several user.
 
 # Functions and working rules
 The chat supports registration, login, and exchanging messages. 
