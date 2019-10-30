@@ -1,0 +1,29 @@
+body {
+    background-size: cover;
+}
+
+.inputFields {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #e5e5e5;
+}
+
+.buttons {
+  line-height: 1.1;
+  white-space: pre-line;
+  border-radius:7px;
+  background: #87CEFA;
+  box-shadow: inset rgba(255,255,255,.5) 1px 1px;
+  border: 1px;
+  border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+}
+
+.buttons:hover {
+    background: #2EE59D;
+    color: white;
+}
+
+.buttons:active {
+background-color: white;
+}

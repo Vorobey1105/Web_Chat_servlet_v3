@@ -1,0 +1,63 @@
+#loginWindow { 
+    margin-top:65px;
+    margin-left:auto;
+    margin-right:auto;
+    font-weight: 200;
+    background: #FFF5EE;
+    padding: 20px; 
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    left: 16%;
+    font-weight: 200;
+    width: 400px; 
+}
+
+#headTitle{
+   text-align: center;
+   font-weight: 300;
+   font-size: 27px;
+   color: grey;
+}
+
+#displayError { 
+	color: #fe011b;
+	margin-left: 120px;
+}
+
+.labelID {
+  font-weight: 300;
+  color: grey;
+  position: absolute;
+  margin-left: 135px;
+  font-size: 18px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;  
+}
+
+.inputFields {
+  margin-left: 32px;
+  width: 85%;
+  margin-bottom: 11px;
+}
+
+.inputFields:hover {
+ transition: 0.6s;
+ border: 2px solid #87CEFA;
+}
+
+#enterLoginButton {
+  margin-left:105px;
+  width: 200px;
+  height: 25px;
+  border: 1px;
+  margin-top: 11px;
+}
+
+#registrationButton {
+  margin-left:105px;
+  width: 200px;
+  height: 25px;
+  margin-top: 22px;
+}

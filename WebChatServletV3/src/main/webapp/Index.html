@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+  		<link rel="stylesheet" type="text/css" href="css/generalStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/registrationStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/chatStyle.css">
+		<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/
+			js.cookie.min.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
+		<script type="text/javascript" src="js/registration.js"></script> 
+		<script type="text/javascript" src="js/chat.js"></script> 
+        <title>Web chat V3</title>     
+    </head>
+<body>
+	<div id="loginWindow">
+		<h1 id="headTitle" class="headTitles">Welcome to the Chat!!!</h1>
+		<p id="displayError" />
+		<form id="userLoginForm">
+			<input type="hidden" name="command" value="login"> 
+			<label class="labelID" for="inputNick"> Введите ваш ник: </label>
+			<br>
+			<br> <input id="inputNickLogin" placeholder="Ваш ник" 
+				class="inputFields" type="text" size="27" name="username" /><br>
+			<label class="labelID" for="inputPass"> Введите пароль:</label><br>
+			<br> 
+			<input id="inputPassLogin" placeholder="Ваш пароль" 
+				class="inputFields" type="password" size="27" 
+					name="userPassword" value="" /> 
+			<input id="enterLoginButton" class="buttons" type="submit" 
+				value="ВХОД">
+		</form>
+		<form id="registrationFormPart" action="#/registration" method="post">
+			<input id="registrationButton" class="buttons" type="submit"
+				value="Регистрация">
+		</form>
+		<p id="displayError">
+	</div>
+    <div id="registrationFormBlock"style="display: none">
+     <form method="POST" id="registrationForm" enctype="multipart/form-data" 
+  	class="windows">
+      <h1 id=registrationSign>Registration form</h1>
+		<input type="hidden" name="command" value="registration"> 	
+		<div id="displayErrorNick" class="error"/></div>
+		<label class="labelRegistration" for="inputNick"> Ник (на английском): 
+			</label><br> 
+  		<input id="inputNick" class="inputFields" placeholder="Пример: Ivan2106" 
+  			type="text" size="40" name="username"/><br>
+    
+    	<div id="displayErrorPass" class="error"/></div>
+		<label class="labelRegistration" for="inputPass"> 
+			Пароль (на английском):</label><br> 
+		<input id="inputPass" class="inputFields" 
+			placeholder="Любой пароль на английском языке" 
+			type="password" size="40" name="userPassword"/><br>
+			
+		<div id="displayErrorPassCheck" class="error"></div>
+		<label class="labelRegistration" for="inputPass"> 
+			Повторите пароль:</label><br> 
+		<input id="inputPassCheck" class="inputFields" 
+			placeholder="Повторите ранее введёный пароль" 
+				type="password" size="40" name="userPasswordCheck"/><br>
+    
+    	<div id="displayErrorFullName" class="error"></div>
+      	<label class="labelRegistration"  for="inputFullName"> ФИО: </label><br> 
+  		<input id="inputFullName" class="inputFields" 
+  			placeholder="Пример: Иванов Иван Иванович" 
+  				type="text" size="40" name="fullName"/><br>
+    
+    	<div id="displayErrorPhoneNumber" class="error"></div>
+      	<label class="labelRegistration" for="inputPhoneNumber"> 
+      		Телефон: </label><br> 
+		<input id="inputPhoneNumber" class="inputFields" 
+			placeholder="Пример: +79207777777" type="text" size="40" 
+				name="PhoneNumber"/><br>
+    
+    	<div id="displayErrorEmail" class="error"></div>
+      	<label class="labelRegistration" for="inputEmail"> Email: </label><br> 
+		<input id="inputEmail" class="inputFields" 
+			placeholder="Пример: example@mail.com" 
+				type="text" size="40" name="email"/><br>
+		
+		<label class="labelRegistration" for="inputFile"> Фото: </label><br> 
+		<input id="inputFile" class="inputFields" type="file" size="40" 
+			name="file" multiple accept=".jpg,.jpeg,.bmp,.ico"/><br> 
+		
+		<input id="registrationButtonReg" class="buttons" type="submit" 
+			value="Зарегистрироваться">
+	</form>
+	</div>
+
+	<div id="chatMainPage" style="display: none">
+		<h1 id="chatSign">Online Chat</h1>
+		<p id="greetTitle">Здравствуйте, </p>
+		<button id="logout" class="buttons">Logout</button>
+		<p>
+		<p id="messageTitle">Сообщения</p>
+		<div id="messagesList">
+			<div id="messages"></div>
+			<div id="bottom"></div>
+		</div>
+		<p id="activeUsersTitle">Активные пользователи</p>
+		<div id="onlineUsers"></div>	
+		<textarea id="messageToSend" placeholder="Введите сообщение" 
+			name="message"></textarea>
+		<input id="sendMessageButton" class="buttons" type="submit" 
+			value="Отправить">
+		<p id="messageSentSign"></p>
+		<div id="userDataHoverMenu"></div>
+	</div>
+</body>
+</html>

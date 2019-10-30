@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>WebChatServletV3</display-name>
+
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file>Index.html</welcome-file>
+	</welcome-file-list>
+
+	<resource-ref>
+		<description>Oracle Datasource</description>
+		<res-ref-name>jdbc/XE</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+	<filter>
+		<display-name>CreateToken</display-name>
+		<filter-name>CreateToken</filter-name>
+		<filter-class>com.epam.chat.filters.CreateToken</filter-class>
+	</filter>
+	<filter>
+		<display-name>ValidateToken</display-name>
+		<filter-name>ValidateToken</filter-name>
+		<filter-class>com.epam.chat.filters.ValidateToken</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CreateToken</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ValidateToken</filter-name>
+		<url-pattern>/update</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>FrontController</servlet-name>
+		<servlet-class>com.epam.chat.servlets.FrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FrontController</servlet-name>
+		<url-pattern>/FrontController</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Index</servlet-name>
+		<jsp-file>/index.html</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>registrationJsp</servlet-name>
+		<jsp-file>/registration.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>registrationJsp</servlet-name>
+		<url-pattern>/registration</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>chatJsp</servlet-name>
+		<jsp-file>/chat.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>chatJsp</servlet-name>
+		<url-pattern>/chat</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>uploadDirectory</param-name>
+		<param-value>webapps/WebChatServletV3-1.0/images</param-value>
+	</context-param>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
