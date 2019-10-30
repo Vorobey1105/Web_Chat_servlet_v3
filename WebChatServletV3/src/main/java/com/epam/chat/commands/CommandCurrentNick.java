@@ -16,7 +16,7 @@ import com.epam.chat.utilities.Utility;
  * 
  * @author Sergey Vorobyev	
  * @since 10/30/2019
- * @version 1.0
+ * @version 1.1
  * 
  */
 
