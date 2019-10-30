@@ -110,7 +110,7 @@ apache-tomcat-9.0.26
 
 ## Versioning
 
-Version 1.0
+Version 1.1
 
 ## Authors
 
