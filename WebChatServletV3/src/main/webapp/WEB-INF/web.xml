@@ -58,35 +58,8 @@
 		<url-pattern>/index</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>registrationJsp</servlet-name>
-		<jsp-file>/registration.jsp</jsp-file>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>registrationJsp</servlet-name>
-		<url-pattern>/registration</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>chatJsp</servlet-name>
-		<jsp-file>/chat.jsp</jsp-file>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>chatJsp</servlet-name>
-		<url-pattern>/chat</url-pattern>
-	</servlet-mapping>
-
 	<context-param>
 		<param-name>uploadDirectory</param-name>
 		<param-value>webapps/WebChatServletV3-1.0/images</param-value>
 	</context-param>
-
-	<jsp-config>
-		<jsp-property-group>
-			<url-pattern>*.jsp</url-pattern>
-			<page-encoding>UTF-8</page-encoding>
-		</jsp-property-group>
-	</jsp-config>
 </web-app>
